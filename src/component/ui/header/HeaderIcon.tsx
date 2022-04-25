@@ -12,14 +12,25 @@ export const HeaderIcon = () => {
 	const { toggleSideMenu } = useContext(UiContext);
 	return (
 		<div className="icons">
-			<FontAwesomeIcon className="icon bars-icon" onClick={toggleSideMenu} icon={faBars} />
-			<FontAwesomeIcon className="icon search-icon" icon={faSearch} />
+			<FontAwesomeIcon
+				className="icon bars-icon"
+				onClick={toggleSideMenu}
+				icon={faBars}
+			/>
+			<FontAwesomeIcon
+				className="icon search-icon"
+				onClick={toggleSideMenu}
+				icon={faSearch}
+			/>
 			<Link href="/cart">
-        <a className="cart">
-  				<FontAwesomeIcon className="icon shopping-icon" icon={faCartShopping} />
-  				<span>0</span>
-  			</a>
-      </Link>
+				<a className="cart">
+					<FontAwesomeIcon
+						className="icon shopping-icon"
+						icon={faCartShopping}
+					/>
+					<span>0</span>
+				</a>
+			</Link>
 		</div>
 	);
 };
