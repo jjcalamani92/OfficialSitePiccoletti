@@ -9,6 +9,7 @@
     align-items: center;
     
     .nav-link > a{
+      
       line-height: 3rem;
       color: $primaryText;
       padding: 1.5rem 2rem;
@@ -24,6 +25,7 @@
     }
     .nav-link{
       position: relative;
+      z-index: 1;
       &:hover > a{
         transform: scale(1.1);
       }

@@ -6,6 +6,7 @@ export * from './detail/Detail';
 export * from './footer/Footer';
 export * from './button/Button';
 export * from './swiper/Swiper';
+export * from './spinner/Spinner';
 export * from './swiper/SwiperHome';
 export * from './swiper/SwiperCategory';
 export * from './counter/Counter';

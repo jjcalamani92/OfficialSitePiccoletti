@@ -9,7 +9,7 @@ export const getProductBySubCategory = (
 		'poleras',
 		'leggins',
 		'sudaderas',
-		'barniz',
+		'blusas',
 		'protector_de_chasis',
 		'masilla',
 		'primer',

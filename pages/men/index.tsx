@@ -10,9 +10,17 @@ const CategoryPage: NextPage = () => {
 		<Layout title={'Piccoletti - Ropa'} pageDescription={'la mejor ropa'}>
 			<HeadingPrimary titleP="Ropa de Varon" />
 			<HeadingSecondary title="poleras" category="#" />
-			<CategoryComponent products={products} subCategory="poleras" />
+			<CategoryComponent
+				products={products}
+				subCategory="poleras"
+				isLoading={isLoading}
+			/>
 			<HeadingSecondary title="chamarras" category="#" />
-			<CategoryComponent products={products} subCategory="chamarras" />
+			<CategoryComponent
+				products={products}
+				subCategory="chamarras"
+				isLoading={isLoading}
+			/>
 		</Layout>
 	);
 };

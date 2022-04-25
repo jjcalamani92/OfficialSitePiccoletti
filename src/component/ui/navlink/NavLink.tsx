@@ -6,14 +6,15 @@ import NextLink from 'next/link';
 import { UiContext } from '../../../context';
 const dates = ['men', 'women', 'kid'];
 const dates2 = ['chamarras', 'poleras', 'camisas'];
+const dates3 = ['sudaderas', 'chamarras', 'leggins', 'blusas'];
 
 export const NavLink = () => {
-	const { toggleSideMenu } = useContext(UiContext);
+	const { isMenuOpen, toggleSideMenu } = useContext(UiContext);
 	return (
 		<ul>
 			<li className="nav-link">
 				<NextLink href="/men" passHref prefetch={false}>
-					<a onClick={toggleSideMenu}>
+					<a onClick={isMenuOpen ? toggleSideMenu : ''}>
 						hombre
 						<FontAwesomeIcon className="icon" icon={faCaretDown} />
 					</a>
@@ -23,7 +24,7 @@ export const NavLink = () => {
 						{dates2.map((data, i) => (
 							<li className="dropdown-link" key={i}>
 								<Link href={`/men/${data}`}>
-									<a onClick={toggleSideMenu}>{data}</a>
+									<a onClick={isMenuOpen ? toggleSideMenu : ''}>{data}</a>
 								</Link>
 							</li>
 						))}
@@ -33,17 +34,17 @@ export const NavLink = () => {
 
 			<li className="nav-link">
 				<NextLink href="/women" passHref prefetch={false}>
-					<a onClick={toggleSideMenu}>
+					<a onClick={isMenuOpen ? toggleSideMenu : ''}>
 						mujer
 						<FontAwesomeIcon className="icon" icon={faCaretDown} />
 					</a>
 				</NextLink>
 				<div className="dropdown">
 					<ul>
-						{dates2.map((data, i) => (
+						{dates3.map((data, i) => (
 							<li className="dropdown-link" key={i}>
-								<Link href={`/men/${data}`}>
-									<a onClick={toggleSideMenu}>{data}</a>
+								<Link href={`/women/${data}`}>
+									<a onClick={isMenuOpen ? toggleSideMenu : ''}>{data}</a>
 								</Link>
 							</li>
 						))}
@@ -52,9 +53,9 @@ export const NavLink = () => {
 			</li>
 
 			<li className="nav-link">
-				<Link href="/contacto">
-					<a onClick={toggleSideMenu}>contacto</a>
-				</Link>
+				<NextLink href="/contacto" passHref prefetch={false}>
+					<a onClick={isMenuOpen ? toggleSideMenu : ''}>contacto</a>
+				</NextLink>
 			</li>
 		</ul>
 	);

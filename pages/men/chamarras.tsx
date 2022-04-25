@@ -2,7 +2,7 @@ import { NextPage } from 'next';
 import { useProduct } from '../../hooks';
 import { Layout } from '../../src/component/layout';
 import { ProductComponent } from '../../src/component/page';
-import { HeadingPrimary } from '../../src/component/ui';
+import { HeadingPrimary, Spinner } from '../../src/component/ui';
 import { getProductBySubCategory } from '../../src/helpers/getProductBySubCategory';
 
 const HombrePage: NextPage = () => {
@@ -15,7 +15,7 @@ const HombrePage: NextPage = () => {
 		>
 			<HeadingPrimary titleP="chamarras" />
 			{isLoading ? (
-				<h1>Cargando....</h1>
+				<Spinner />
 			) : (
 				<ProductComponent products={productsCategory} />
 			)}
