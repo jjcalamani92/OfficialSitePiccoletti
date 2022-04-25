@@ -13,7 +13,6 @@ const CategoryPage: NextPage = () => {
 			<CategoryComponent products={products} subCategory="poleras" />
 			<HeadingSecondary title="chamarras" category="#" />
 			<CategoryComponent products={products} subCategory="chamarras" />
-			<HeadingSecondary title="pantalones" category="#" />
 		</Layout>
 	);
 };
