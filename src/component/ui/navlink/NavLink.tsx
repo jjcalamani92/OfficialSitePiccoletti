@@ -14,7 +14,7 @@ export const NavLink = () => {
 		<ul>
 			<li className="nav-link">
 				<NextLink href="/men" passHref prefetch={false}>
-					<a onClick={isMenuOpen ? toggleSideMenu : ''}>
+					<a onClick={isMenuOpen ? toggleSideMenu : ('' as any)}>
 						hombre
 						<FontAwesomeIcon className="icon" icon={faCaretDown} />
 					</a>
@@ -24,7 +24,9 @@ export const NavLink = () => {
 						{dates2.map((data, i) => (
 							<li className="dropdown-link" key={i}>
 								<Link href={`/men/${data}`}>
-									<a onClick={isMenuOpen ? toggleSideMenu : ''}>{data}</a>
+									<a onClick={isMenuOpen ? toggleSideMenu : ('' as any)}>
+										{data}
+									</a>
 								</Link>
 							</li>
 						))}
@@ -34,7 +36,7 @@ export const NavLink = () => {
 
 			<li className="nav-link">
 				<NextLink href="/women" passHref prefetch={false}>
-					<a onClick={isMenuOpen ? toggleSideMenu : ''}>
+					<a onClick={isMenuOpen ? toggleSideMenu : ('' as any)}>
 						mujer
 						<FontAwesomeIcon className="icon" icon={faCaretDown} />
 					</a>
@@ -44,7 +46,9 @@ export const NavLink = () => {
 						{dates3.map((data, i) => (
 							<li className="dropdown-link" key={i}>
 								<Link href={`/women/${data}`}>
-									<a onClick={isMenuOpen ? toggleSideMenu : ''}>{data}</a>
+									<a onClick={isMenuOpen ? toggleSideMenu : ('' as any)}>
+										{data}
+									</a>
 								</Link>
 							</li>
 						))}
@@ -54,7 +58,7 @@ export const NavLink = () => {
 
 			<li className="nav-link">
 				<NextLink href="/contacto" passHref prefetch={false}>
-					<a onClick={isMenuOpen ? toggleSideMenu : ''}>contacto</a>
+					<a onClick={isMenuOpen ? toggleSideMenu : ('' as any)}>contacto</a>
 				</NextLink>
 			</li>
 		</ul>
